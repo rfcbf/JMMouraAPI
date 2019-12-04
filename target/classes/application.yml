@@ -1,6 +1,6 @@
 spring:
   datasource:
-    url: jdbc:mysql://us-cdbr-iron-east-05.cleardb.net/heroku_fd15c76f51f6ca8?reconnect=true
+    url: jdbc:mysql://us-cdbr-iron-east-05.cleardb.net/heroku_fd15c76f51f6ca8?reconnect=true&createDatabaseIfNotExist=true
     platform: mysql
     username: bc9c82fd6a1ad5
     password: 2ec0d837
@@ -9,8 +9,10 @@ spring:
     hibernate:
       naming:
         physical-strategy: org.hibernate.boot.model.naming.PhysicalNamingStrategyStandardImpl
+      ddl-auto: update
+
 server:
-  port: 8080
+#  port: 8080
   servlet:
-    context-path: /moura-api
+    context-path: /
 
