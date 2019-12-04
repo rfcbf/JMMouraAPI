@@ -9,7 +9,7 @@ import org.springframework.stereotype.Component;
 
 @Generated(
     value = "org.mapstruct.ap.MappingProcessor",
-    date = "2019-12-04T13:03:59-0200",
+    date = "2019-12-04T15:53:11-0200",
     comments = "version: 1.3.0.Final, compiler: javac, environment: Java 1.8.0_212 (AdoptOpenJDK)"
 )
 @Component
@@ -23,15 +23,14 @@ public class CadastroMapperImpl implements CadastroMapper {
 
         CadastroDTO cadastroDTO = new CadastroDTO();
 
-        if ( entity.getId() != null ) {
-            cadastroDTO.setId( String.valueOf( entity.getId() ) );
-        }
+        cadastroDTO.setId( entity.getId() );
         cadastroDTO.setNome( entity.getNome() );
         cadastroDTO.setEndereco( entity.getEndereco() );
         cadastroDTO.setCidade( entity.getCidade() );
         cadastroDTO.setBairro( entity.getBairro() );
         cadastroDTO.setEstado( entity.getEstado() );
         cadastroDTO.setCep( entity.getCep() );
+        cadastroDTO.setDatanasc( entity.getDatanasc() );
         cadastroDTO.setCelular( entity.getCelular() );
 
         return cadastroDTO;
@@ -45,9 +44,7 @@ public class CadastroMapperImpl implements CadastroMapper {
 
         Cadastro cadastro = new Cadastro();
 
-        if ( dto.getId() != null ) {
-            cadastro.setId( Long.parseLong( dto.getId() ) );
-        }
+        cadastro.setId( dto.getId() );
         cadastro.setNome( dto.getNome() );
         cadastro.setEndereco( dto.getEndereco() );
         cadastro.setCidade( dto.getCidade() );
@@ -55,6 +52,7 @@ public class CadastroMapperImpl implements CadastroMapper {
         cadastro.setCep( dto.getCep() );
         cadastro.setCelular( dto.getCelular() );
         cadastro.setEstado( dto.getEstado() );
+        cadastro.setDatanasc( dto.getDatanasc() );
 
         return cadastro;
     }

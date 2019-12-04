@@ -94,20 +94,20 @@ public class Cadastro {
         this.celular = celular;
     }
 
-    public String getDataNasc() {
-        return datanasc;
-    }
-
-    public void setDataNasc(String dataNasc) {
-        datanasc = dataNasc;
-    }
-
     public String getEstado() {
         return estado;
     }
 
     public void setEstado(String estado) {
         this.estado = estado;
+    }
+
+    public String getDatanasc() {
+        return datanasc;
+    }
+
+    public void setDatanasc(String datanasc) {
+        this.datanasc = datanasc;
     }
 
     @Override

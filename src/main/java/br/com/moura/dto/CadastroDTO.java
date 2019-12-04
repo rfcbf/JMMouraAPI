@@ -6,7 +6,7 @@ public class CadastroDTO implements Serializable {
 
     private static final long serialVersionUID = 1L;
 
-    private String id;
+    private Long id;
     private String nome;
     private String endereco;
     private String cidade;
@@ -16,11 +16,11 @@ public class CadastroDTO implements Serializable {
     private String datanasc;
     private String celular;
 
-    public String getId() {
+    public Long getId() {
         return id;
     }
 
-    public void setId(String id) {
+    public void setId(Long id) {
         this.id = id;
     }
 
