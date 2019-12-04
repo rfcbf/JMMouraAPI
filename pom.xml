@@ -13,7 +13,7 @@
 	<groupId>br.com.moura</groupId>
 	<artifactId>moura-api</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<packaging>war</packaging>
+	<packaging>jar</packaging>
 	<name>moura-api</name>
 	<description>Versão API do Projeto Moura</description>
 
