@@ -10,7 +10,7 @@ spring:
       naming:
         physical-strategy: org.hibernate.boot.model.naming.PhysicalNamingStrategyStandardImpl
 server:
-  port: 8088
+  port: 8080
   servlet:
     context-path: /moura-api
 
