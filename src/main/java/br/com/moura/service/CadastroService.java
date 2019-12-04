@@ -22,6 +22,7 @@ public class CadastroService {
     }
 
     public Cadastro salvarCadastro(Cadastro cadastro) {
+        cadastro.setId(null);
         return cadastroRepository.save(cadastro);
     }
 
