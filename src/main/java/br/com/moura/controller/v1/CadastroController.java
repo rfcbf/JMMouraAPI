@@ -12,7 +12,7 @@ import java.util.List;
 
 
 @RestController
-@RequestMapping("/v1/cadastro")
+//@RequestMapping("/v1/cadastro")
 public class CadastroController {
 
     @Autowired
@@ -21,31 +21,31 @@ public class CadastroController {
     @Autowired
     private CadastroMapper cadastroMapper;
 
-    @GetMapping()
+    @GetMapping("/v1/cadastro")
     public ResponseEntity<List<CadastroDTO>> listarCadastro() {
         List<CadastroDTO> listaDTO = cadastroMapper.toDto(cadastroService.listarTodos());
         return ResponseEntity.ok(listaDTO);
     }
 
-    @GetMapping("/{idCadastro}")
+    @GetMapping("/v1/cadastro/{idCadastro}")
     public ResponseEntity<CadastroDTO> buscarCadastro(@PathVariable final Long idCadastro) {
         CadastroDTO dto = cadastroMapper.toDto(cadastroService.buscarCadastro(idCadastro));
         return ResponseEntity.ok(dto);
     }
 
-    @PostMapping()
+    @PostMapping("/v1/cadastro")
     public ResponseEntity<CadastroDTO> salvarCadastro(@RequestBody CadastroDTO cadastroDTO) {
         CadastroDTO dto = cadastroMapper.toDto(cadastroService.salvarCadastro(cadastroMapper.toEntity(cadastroDTO)));
         return ResponseEntity.ok(dto);
     }
 
-    @PutMapping()
+    @PutMapping("/v1/cadastro)")
     public ResponseEntity<CadastroDTO> atualizarCadastro(@RequestBody CadastroDTO cadastroDTO) {
         CadastroDTO dto = cadastroMapper.toDto(cadastroService.atualizarCadastro(cadastroMapper.toEntity(cadastroDTO)));
         return ResponseEntity.ok(dto);
     }
 
-    @DeleteMapping("/{idCadastro}")
+    @DeleteMapping("/v1/cadastro/{idCadastro}")
     public ResponseEntity<Void> deletarCadastro(@PathVariable final Long idCadastro) {
         cadastroService.deletarCadastro(idCadastro);
         return ResponseEntity.ok().build();
