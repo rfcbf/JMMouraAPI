@@ -7,7 +7,7 @@ public class ErrorDTO implements Serializable {
     private static final long serialVersionUID = 1L;
 
     private String codigo;
-    private String descricao;
+    private String nome;
 
 
     public String getCodigo() {
@@ -18,11 +18,11 @@ public class ErrorDTO implements Serializable {
         this.codigo = codigo;
     }
 
-    public String getDescricao() {
-        return descricao;
+    public String getNome() {
+        return nome;
     }
 
-    public void setDescricao(String descricao) {
-        this.descricao = descricao;
+    public void setNome(String nome) {
+        this.nome = nome;
     }
 }

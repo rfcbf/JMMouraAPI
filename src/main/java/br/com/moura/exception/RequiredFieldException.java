@@ -1,10 +1,5 @@
 package br.com.moura.exception;
 
-/**
- * @author alexandre.lovatini (alexandre.lovatini@castgroup.com.br)
- * @version 1.0
- * @since 1.0-SNAPSHOT
- */
 public class RequiredFieldException extends Exception {
 
     private static final long serialVersionUID = -4405279873054377336L;

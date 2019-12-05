@@ -9,18 +9,13 @@ import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.context.request.WebRequest;
 import org.springframework.web.servlet.mvc.method.annotation.ResponseEntityExceptionHandler;
 
-/**
- * @author alexandre.lovatini (alexandre.lovatini@castgroup.com.br)
- * @version 1.0
- * @since 1.0-SNAPSHOT
- */
 @ControllerAdvice
 public class AppExceptionHandler extends ResponseEntityExceptionHandler {
 
     private ResponseEntity<ErrorDTO> gerarResposta(Exception ex, HttpStatus status){
         ErrorDTO errorDTO = new ErrorDTO();
         errorDTO.setCodigo(status.toString());
-        errorDTO.setDescricao(ex.getMessage());
+        errorDTO.setNome(ex.getMessage());
         return new ResponseEntity<>(errorDTO,status);
     }
 
